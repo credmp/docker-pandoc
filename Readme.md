@@ -50,5 +50,4 @@ This image is licensed under the GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2
 
 If you have any questions or suggestions about the base image, please contact [Thomas Weise](mailto:tweise@hfuu.edu.cn) of the [Institute of Applied Optimization](http://iao.hfuu.edu.cn) of [Hefei University](http://www.hfuu.edu.cn) in Hefei, Anhui, China.
 
-If you have any questions regarding my additions, please contact [Arjen Wiersma](https://twitter.com/credmp).
-
+If you have any questions regarding my additions, please contact [Arjen Wiersma](https://github.com/credmp/docker-pandoc) by opening an issue on Github.
