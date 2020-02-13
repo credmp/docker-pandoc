@@ -1,10 +1,16 @@
 FROM thomasweise/docker-pandoc
 
-MAINTAINER Arjen Wiersma <arjen@wiersma.org
+MAINTAINER Arjen Wiersma <arjen@wiersma.org>
 
-# install pandoc-latex-environment
+# install pandoc-latex-environment and latex packages
+# tlmgr fails to run updmap, so ignore its errors
 RUN apt update && apt install -y python3-pip && pip3 install pandoc-latex-environment &&\
-# clean up all temporary files
+    tlmgr init-usertree && \
+    updmap -sys && \
+    (tlmgr install xecjk filehook unicode-math ucharcat pagecolor babel-german ly1 mweights sourcecodepro sourcesanspro mdframed needspace fvextra footmisc footnotebackref background || echo "tlmgr ran") &&\
+    updmap -sys && \
+    (tlmgr install awesomebox fontawesome5 || echo "tlmgr ran for fontawesome") && \
+    updmap -sys && \
     apt-get clean &&\
     apt-get autoclean -y &&\
     apt-get autoremove -y &&\
