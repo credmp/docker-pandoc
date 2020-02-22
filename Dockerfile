@@ -3,7 +3,7 @@ FROM thomasweise/docker-pandoc
 MAINTAINER Arjen Wiersma <arjen@wiersma.org>
 
 # install pandoc-latex-environment and latex packages
-# tlmgr fails to run updmap, so ignore its errors
+# tlmgr fails to run updmap, so ignore its errors, this might be bad.
 RUN apt update && apt install -y python3-pip && pip3 install pandoc-latex-environment &&\
     tlmgr init-usertree && \
     updmap -sys && \
