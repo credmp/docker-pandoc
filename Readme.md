@@ -42,6 +42,8 @@ The work directory is set to `/doc/`.
 docker run -v $(pwd):/doc/ -t -i --rm credmp/pandoc pandoc -v
 ```
 
+The current image size is approximately 4GB.
+
 ## 3. License
 
 This image is licensed under the GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007, which you can find in file [LICENSE.md](http://github.com/thomasWeise/docker-texlive/blob/master/LICENSE.md). The license applies to the way the image is built, while the software components inside the image are under the respective licenses chosen by their respective copyright holders.
